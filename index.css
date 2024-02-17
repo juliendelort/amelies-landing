@@ -12,7 +12,7 @@ html {
 
   font-weight: normal;
 
-  @media (min-width: 1000px) {
+  @media (min-width: 600px) {
     --body-padding: 3rem;
   }
 }
@@ -39,7 +39,7 @@ h1 {
   margin: 2.5rem 0 2rem;
   line-height: 1.1;
 
-  @media (min-width: 1000px) {
+  @media (min-width: 600px) {
     font-size: 6rem;
   }
 }
@@ -52,7 +52,11 @@ h1 {
 .hero {
   display: grid;
   gap: 4rem;
-  grid-template-columns: minmax(100%, 500px);
+  grid-template-columns: 1fr;
+
+  @media (min-width: 600px) {
+    grid-template-columns: min-content;
+  }
 
   @media (min-width: 1000px) {
     grid-template-columns: 1fr 1fr;
@@ -73,11 +77,15 @@ h1 {
     background: var(--c-brand);
     padding: 7rem 6rem;
 
+    @media (min-width: 600px) {
+      width: 500px;
+    }
+
     >img {
       margin: 0 auto;
       object-fit: contain;
       display: block;
-      width: 100%;
+      max-width: 100%;
     }
   }
 }
