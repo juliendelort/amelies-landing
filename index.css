@@ -6,7 +6,12 @@ html {
   --c-on-brand: #fff;
   --f-title: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
   --f-text: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+  --body-padding: 2rem;
   font-weight: normal;
+
+  @media (min-width: 1000px) {
+    --body-padding: 3rem;
+  }
 }
 
 * {
@@ -22,7 +27,7 @@ body {
 header {
   background: var(--c-surface-accent);
   color: var(--c-on-surface-accent);
-  padding: 6rem 3rem 2rem;
+  padding: 6rem var(--body-padding) 2rem;
 }
 
 h1 {
@@ -84,7 +89,7 @@ h1 {
 
 .testimonial {
   margin: 10rem 0;
-  padding: 5rem 3rem;
+  padding: 5rem var(--body-padding);
   display: flex;
   align-items: center;
   position: relative;
@@ -113,6 +118,10 @@ h1 {
 
 q {
   font-style: italic;
-  font-size: 2rem;
+  font-size: 1.25rem;
   font-weight: 300;
+
+  @media (min-width: 1000px) {
+    font-size: 2rem;
+  }
 }
