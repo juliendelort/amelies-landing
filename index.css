@@ -7,6 +7,9 @@ html {
   --f-title: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
   --f-text: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
   --body-padding: 1.5rem;
+  --c-testimonial-name: #9aa7df;
+  --c-testimonial-role: #b5b5b5;
+
   font-weight: normal;
 
   @media (min-width: 1000px) {
@@ -102,15 +105,35 @@ h1 {
     margin: 10rem 0;
   }
 
+  img {
+    width: 100px;
+    display: block;
+    grid-area: photo;
+
+    @media (min-width: 1000px) {
+      width: 300px;
+    }
+  }
+
 
   .box {
     z-index: 1;
     background: white;
     padding: 3rem;
     box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.08);
+    display: grid;
+    grid-template-areas:
+      "photo"
+      "text"
+      "user";
+    gap: 2rem;
 
     @media (min-width: 1000px) {
       padding: 5rem;
+
+      grid-template-areas:
+        "text photo"
+        "user photo";
     }
   }
 
@@ -125,14 +148,29 @@ h1 {
       object-fit: cover;
     }
   }
+
+  .user {
+    grid-area: user;
+    align-self: end;
+  }
+
+  .testimonial-name {
+    color: var(--c-testimonial-name);
+  }
+
+  .testimonial-role {
+    color: var(--c-testimonial-role);
+  }
 }
 
 q {
   font-style: italic;
   font-size: 1.25rem;
   font-weight: 300;
+  grid-area: text;
 
   @media (min-width: 1000px) {
     font-size: 2rem;
+    margin-top: 2rem;
   }
 }
