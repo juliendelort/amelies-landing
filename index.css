@@ -6,7 +6,7 @@ html {
   --c-on-brand: #fff;
   --f-title: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
   --f-text: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
-  --body-padding: 2rem;
+  --body-padding: 1.5rem;
   font-weight: normal;
 
   @media (min-width: 1000px) {
@@ -35,6 +35,10 @@ h1 {
   font-size: 3.75rem;
   margin: 2.5rem 0 2rem;
   line-height: 1.1;
+
+  @media (min-width: 1000px) {
+    font-size: 6rem;
+  }
 }
 
 .container {
@@ -44,7 +48,7 @@ h1 {
 
 .hero {
   display: grid;
-  gap: 2rem;
+  gap: 4rem;
   grid-template-columns: minmax(100%, 500px);
 
   @media (min-width: 1000px) {
@@ -53,7 +57,7 @@ h1 {
 
   .subtitle {
     font-size: 1.1rem;
-    line-height: 2.25;
+    line-height: 2;
   }
 
   .top {
@@ -88,19 +92,26 @@ h1 {
 }
 
 .testimonial {
-  margin: 10rem 0;
+  margin: 4rem 0;
   padding: 5rem var(--body-padding);
   display: flex;
   align-items: center;
   position: relative;
 
+  @media (min-width: 1000px) {
+    margin: 10rem 0;
+  }
+
 
   .box {
     z-index: 1;
     background: white;
-    padding: 5rem;
+    padding: 3rem;
     box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.08);
-    /* margin-right: 0; */
+
+    @media (min-width: 1000px) {
+      padding: 5rem;
+    }
   }
 
   .background {
