@@ -188,6 +188,10 @@ h1 {
     inset: 0 20% 0 0;
     background: gray;
 
+    .right & {
+      inset: 0 0 0 20%;
+    }
+
     &>img {
       width: 100%;
       height: 100%;
@@ -234,6 +238,7 @@ q {
     font-size: 3rem;
     font-weight: 400;
     margin-bottom: 2rem;
+    margin-top: 0;
   }
 
   .desc {
@@ -286,7 +291,7 @@ q {
 .author {
   background: var(--c-brand);
   color: var(--c-on-brand);
-  padding: 20rem 2rem 0;
+  padding: 20rem 2rem 5rem;
 
   h2 {
     text-transform: uppercase;
@@ -316,4 +321,26 @@ q {
     line-height: 2;
     max-width: 32rem;
   }
+}
+
+.get {
+  background: var(--c-surface-accent);
+  color: var(--c-on-surface-accent);
+  padding: 4rem 1rem;
+  text-align: center;
+
+  h2 {
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    margin-top: 0;
+  }
+}
+
+footer {
+  background: var(--c-surface-accent);
+  color: var(--c-on-surface-accent-high);
+  padding: 2rem 1rem;
+  text-align: center;
+
 }
